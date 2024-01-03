@@ -42,12 +42,8 @@ export function useAuthProvider({
   notify,
   apolloClient,
 }: UseAuthProviderOpts): UserContext {
-  const {
-    login,
-    getExternalAuthUrl,
-    getExternalAccessToken,
-    logout,
-  } = useAuth();
+  const { login, getExternalAuthUrl, getExternalAccessToken, logout } =
+    useAuth();
   const navigate = useNavigator();
   const { authenticated, authenticating, user } = useAuthState();
   const [requestedExternalPluginId] = useLocalStorage(
@@ -84,9 +80,8 @@ export function useAuthProvider({
   const userDetails = useUserDetailsQuery({
     client: apolloClient,
     skip: !authenticated,
-    // Don't change this to 'network-only' - update of intl provider's
-    // state will cause an error
-    fetchPolicy: "cache-and-network",
+    fetchPolicy: "network-only",
+    variables: { id: user?.id, email: user?.email },
   });
 
   const handleLoginError = (error: ApolloError) => {
