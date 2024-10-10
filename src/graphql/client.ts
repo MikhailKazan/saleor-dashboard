@@ -18,6 +18,7 @@ const attachVariablesLink = new ApolloLink((operation, forward) =>
   })),
 );
 
+// @ts-ignore
 export const link = attachVariablesLink.concat(
   createUploadLink({
     credentials: "include",
