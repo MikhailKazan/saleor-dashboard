@@ -33,6 +33,7 @@ export interface CustomerDetailsProps {
   customer: CustomerDetailsQuery["user"];
   data: {
     isActive: boolean;
+    isConfirmed: boolean;
     note: string;
   };
   disabled: boolean;
@@ -87,6 +88,18 @@ const CustomerDetails: React.FC<CustomerDetailsProps> = props => {
             description: "check to mark this account as active",
           })}
           name="isActive"
+          onChange={onChange}
+        />
+        <ControlledCheckbox
+          checked={data.isConfirmed}
+          className={classes.checkbox}
+          disabled={disabled}
+          label={intl.formatMessage({
+            id: "J/tupB",
+            defaultMessage: "User account confirmed",
+            description: "check to mark this account as confirmed",
+          })}
+          name="isConfirmed"
           onChange={onChange}
         />
         <TextField

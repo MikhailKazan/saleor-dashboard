@@ -82,6 +82,7 @@ const CustomerDetailsViewInner: React.FC<CustomerDetailsViewProps> = ({
             email: data.email,
             firstName: data.firstName,
             isActive: data.isActive,
+            isConfirmed: data.isConfirmed,
             lastName: data.lastName,
             note: data.note,
           },
