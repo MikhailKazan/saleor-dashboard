@@ -272,7 +272,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "cross-env NODE_OPTIONS=--max_old_space_size=16384 vite build",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 vite build",
     "preview": "vite preview",
     "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook -c src/storybook/ -o build/storybook",
     "build-types": "node scripts/build-types.js",
