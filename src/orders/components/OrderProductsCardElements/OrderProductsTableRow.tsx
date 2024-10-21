@@ -25,6 +25,10 @@ const useStyles = makeStyles(
       textAlign: "right",
       textOverflow: "ellipsis",
     },
+    colCat: {
+      textAlign: "right",
+      textOverflow: "ellipsis",
+    },
     colTotal: {
       textAlign: "right",
     },
@@ -81,6 +85,13 @@ const TableLine: React.FC<TableLineProps> = ({
       >
         {maybe(() => line.orderLine.productName) || <Skeleton />}
       </TableCellAvatar>
+      <TableCell className={classes.colCat}>
+        {line?.orderLine ? (
+          line.orderLine.variant.product.category.name
+        ) : (
+          <Skeleton />
+        )}
+      </TableCell>
       <TableCell className={classes.colSku}>
         {line?.orderLine ? line.orderLine.productSku : <Skeleton />}
       </TableCell>

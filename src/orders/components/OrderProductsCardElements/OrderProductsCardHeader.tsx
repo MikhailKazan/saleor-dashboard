@@ -24,6 +24,11 @@ const useStyles = makeStyles(
     colSku: {
       textAlign: "right",
       textOverflow: "ellipsis",
+      width: 100,
+    },
+    colCat: {
+      textAlign: "right",
+      textOverflow: "ellipsis",
       width: 140,
     },
     colTotal: {
@@ -60,6 +65,7 @@ const TableHeader = () => {
     <>
       <colgroup>
         <col className={classes.colName} />
+        <col className={classes.colCat} />
         <col className={classes.colSku} />
         <col className={classes.colQuantity} />
         <col className={classes.colPrice} />
@@ -72,6 +78,13 @@ const TableHeader = () => {
               id="WE8IFE"
               defaultMessage="Product"
               description="product name"
+            />
+          </TableCell>
+          <TableCell className={classes.colCat}>
+            <FormattedMessage
+              id="z9l6bh"
+              defaultMessage="Category"
+              description="ordered product category"
             />
           </TableCell>
           <TableCell className={classes.colSku}>

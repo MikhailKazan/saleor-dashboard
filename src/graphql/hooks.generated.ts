@@ -1346,6 +1346,9 @@ export const OrderLineFragmentDoc = gql`
     product {
       id
       isAvailableForPurchase
+      category {
+        name
+      }
     }
   }
   productName

@@ -62,7 +62,9 @@ interface OrderDraftDetailsProductsProps {
   onOrderLineRemove: (id: string) => void;
 }
 
-const OrderDraftDetailsProducts: React.FC<OrderDraftDetailsProductsProps> = props => {
+const OrderDraftDetailsProducts: React.FC<
+  OrderDraftDetailsProductsProps
+> = props => {
   const { order, errors, onOrderLineChange, onOrderLineRemove } = props;
   const lines = order?.lines ?? [];
 
@@ -85,6 +87,7 @@ const OrderDraftDetailsProducts: React.FC<OrderDraftDetailsProductsProps> = prop
                 <FormattedMessage id="x/ZVlU" defaultMessage="Product" />
               </span>
             </TableCell>
+
             <TableCell className={classes.colQuantity}>
               <FormattedMessage
                 id="nEWp+k"

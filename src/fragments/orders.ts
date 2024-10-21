@@ -94,6 +94,9 @@ export const fragmentOrderLine = gql`
       product {
         id
         isAvailableForPurchase
+        category {
+          name
+        }
       }
     }
     productName
