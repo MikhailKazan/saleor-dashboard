@@ -143,13 +143,8 @@ const Placeholder: React.FC = props => {
 };
 
 const Node: React.FC<NodeRendererProps<TreeItemProps>> = props => {
-  const {
-    node,
-    path,
-    connectDragPreview,
-    connectDragSource,
-    isDragging,
-  } = props;
+  const { node, path, connectDragPreview, connectDragSource, isDragging } =
+    props;
   const classes = useStyles(props);
 
   const draggedClassName = clsx(
