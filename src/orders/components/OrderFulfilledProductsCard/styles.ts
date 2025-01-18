@@ -19,7 +19,7 @@ const useStyles = makeStyles(
           paddingRight: theme.spacing(1),
         },
       },
-      tableLayout: "fixed",
+      tableLayout: "auto",
     },
     infoLabel: {
       display: "inline-block",
